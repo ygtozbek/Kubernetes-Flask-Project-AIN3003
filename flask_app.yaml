@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-uygulama
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: benim-flask-projem
+  template:
+    metadata:
+      labels:
+        app: benim-flask-projem
+    spec:
+      containers:
+      - name: flask-container
+        image: python-app:v1
+        imagePullPolicy: Never # Local image kullanmasi icin
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_HOST
+          value: "mongodb-service"
+        - name: MONGO_USERNAME
+          value: "admin"
+        - name: MONGO_PASSWORD
+          value: "admin"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+spec:
+  type: LoadBalancer 
+  selector:
+    app: benim-flask-projem
+  ports:
+    - protocol: TCP
+      port: 5000 
+      targetPort: 5000
