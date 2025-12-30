@@ -1,5 +1,7 @@
 # 📚 AIN-3003 Project 1: Kubernetes Bookstore API
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+
 Hi there! This is my first project for the AIN-3003 course. I built a containerized Python Flask API that talks to a MongoDB database, all running on a local Kubernetes cluster.
 
 ## 🚀 What's Inside?
